@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sidebar_wrapper {
+    width: 300px;
+    height: 100vh;
+    flex-grow: 1;
+    background-color: #27355C;
+    padding: 16px;
+}
+
+.quiz_section {
+    width: calc(100% - 300px);
+    padding: 16px;
+}
