@@ -81,3 +81,43 @@ let questions = [
     }
 ];
 
+function init() {
+    document.getElementById('allQuestions').innerHTML = questions.length;
+    document.getElementById('currentQuestion').innerHTML = questionIndex + 1;
+        showQuestion();
+        showAnswers();
+}
+
+let questionIndex = 0;
+
+function showQuestion() {
+    document.getElementById('question').innerHTML = questions[questionIndex]['question'];
+}
+
+function showAnswers() {
+    document.getElementById('answer_1').innerHTML = questions[questionIndex]['answer_1'];
+    document.getElementById('answer_2').innerHTML = questions[questionIndex]['answer_2'];
+    document.getElementById('answer_3').innerHTML = questions[questionIndex]['answer_3'];
+    document.getElementById('answer_4').innerHTML = questions[questionIndex]['answer_4'];
+}
+
+function nextQuestion() {
+    questionIndex++;
+    showQuestion();
+    showAnswers();
+
+    document.getElementById('card_1').classList.remove('bg-success', 'bg-failure');
+    document.getElementById('card_2').classList.remove('bg-success', 'bg-failure');
+    document.getElementById('card_3').classList.remove('bg-success', 'bg-failure');
+    document.getElementById('card_4').classList.remove('bg-success', 'bg-failure');
+}
+
+function answer(selection) {
+    let right_answer = questions[questionIndex]['right_answer'];
+
+    if (selection == right_answer) {
+        document.getElementById('card_' + selection).classList.add('bg-success');
+    } else {
+        document.getElementById('card_' + selection).classList.add('bg-failure');
+    }
+}
