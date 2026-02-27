@@ -18,8 +18,24 @@
 
 <div class="container">
 
-<div class="card quiz_card">
+<div class="card quiz_card" id="endScreen" style="display: none;">
+  <img src="./assets/img/trophy.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h2 class="card-title text-center">Quiz beendet!!</h2>
+    <p class="text-center">Herzlichen Glückwunsch! <br>
+     Du hast <span id="correctAnswers">0</span> von <span id="quizLength"></span> Fragen richtig beantwortet.
+    </p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="restartQuiz()">Quiz erneut starten</button>
+      </div>
+  </div>
+</div>
+
+<div class="card quiz_card" id="quizCard">
   <img src="./assets/img/question.jpg" class="card-img-top" alt="...">
+  <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" id="progress-bar" style="width: 25%">25%</div>
+</div>
   <div class="card-body">
     <h5 class="card-title" id="question">Question</h5>
     

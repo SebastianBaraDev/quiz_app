@@ -32,3 +32,18 @@ body {
 .bg-success, .bg-danger {
     color: white !important;
 }
+
+.text-center {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
