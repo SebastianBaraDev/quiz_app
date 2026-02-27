@@ -29,10 +29,6 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.bg-success {
-    background-color: #41af5b !important;
-}
-
-.bg-failure {
-    background-color: #dc354685 !important;
+.bg-success, .bg-danger {
+    color: white !important;
 }
